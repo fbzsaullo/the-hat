@@ -1,0 +1,2 @@
+class Survay < ApplicationRecord
+end
