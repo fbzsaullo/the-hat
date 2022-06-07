@@ -1,4 +1,4 @@
 class Question < ApplicationRecord
   has_many :options
-  belongs_to :survay
+  belongs_to :survey
 end
