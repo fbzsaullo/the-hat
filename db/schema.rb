@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_06_190935) do
+ActiveRecord::Schema.define(version: 2022_06_07_143318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,24 +41,26 @@ ActiveRecord::Schema.define(version: 2022_06_06_190935) do
   create_table "options", force: :cascade do |t|
     t.string "option"
     t.bigint "question_id", null: false
+    t.bigint "house_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["house_id"], name: "index_options_on_house_id"
     t.index ["question_id"], name: "index_options_on_question_id"
   end
 
   create_table "questions", force: :cascade do |t|
     t.string "question"
-    t.bigint "survay_id", null: false
+    t.bigint "survey_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["survay_id"], name: "index_questions_on_survay_id"
+    t.index ["survey_id"], name: "index_questions_on_survey_id"
   end
 
-  create_table "survays", force: :cascade do |t|
+  create_table "surveys", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_survays_on_user_id"
+    t.index ["user_id"], name: "index_surveys_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -70,14 +72,18 @@ ActiveRecord::Schema.define(version: 2022_06_06_190935) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
+    t.bigint "house_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["house_id"], name: "index_users_on_house_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "answers", "options"
   add_foreign_key "answers", "users"
   add_foreign_key "languages", "houses"
+  add_foreign_key "options", "houses"
   add_foreign_key "options", "questions"
-  add_foreign_key "questions", "survays"
-  add_foreign_key "survays", "users"
+  add_foreign_key "questions", "surveys"
+  add_foreign_key "surveys", "users"
+  add_foreign_key "users", "houses"
 end
