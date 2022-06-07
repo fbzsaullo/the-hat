@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :answers
   has_many :surveys
-  belongs_to :house
+  belongs_to :house, optional: true
 end
