@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_08_194642) do
+ActiveRecord::Schema.define(version: 2022_06_07_143318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
+    t.integer "score"
     t.bigint "user_id", null: false
     t.bigint "question_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -40,21 +41,10 @@ ActiveRecord::Schema.define(version: 2022_06_08_194642) do
 
   create_table "questions", force: :cascade do |t|
     t.string "question"
-    t.integer "option"
-    t.bigint "survey_id", null: false
     t.bigint "house_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "answered", default: false
     t.index ["house_id"], name: "index_questions_on_house_id"
-    t.index ["survey_id"], name: "index_questions_on_survey_id"
-  end
-
-  create_table "surveys", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_surveys_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -76,7 +66,5 @@ ActiveRecord::Schema.define(version: 2022_06_08_194642) do
   add_foreign_key "answers", "users"
   add_foreign_key "languages", "houses"
   add_foreign_key "questions", "houses"
-  add_foreign_key "questions", "surveys"
-  add_foreign_key "surveys", "users"
   add_foreign_key "users", "houses"
 end
