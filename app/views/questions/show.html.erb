@@ -1,2 +1,8 @@
-<h1>Questions#show</h1>
-<p>Find me in app/views/questions/show.html.erb</p>
+<div class="container">
+<%= "#{@question.id} - #{@question.question}" %>
+<%= simple_form_for @answer do |f| %>
+  <%= f.range_field :score, :in => 1..5, :step => 1, class: 'w-25 form-range', id: 'customRange' %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+  <%= f.input :question_id, as: :hidden, type: :range, input_html: { value: @question.id } %>
+<% end %>
+</div>
