@@ -1,4 +1,4 @@
-body{
+.login{
   background:  image-url('background_blur.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -6,4 +6,9 @@ body{
   background-size: cover;
   color: $color4;
   font-family: $main-font;
+}
+
+h2{
+  font-size: 48px;
+  font-weight: 700;
 }
