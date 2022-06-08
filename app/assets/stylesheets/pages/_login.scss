@@ -1,7 +1,3 @@
-h2{
-  font-size: 48px;
-  font-weight: 700;
-}
 
 .login{
   background:  image-url('background_blur.jpg') no-repeat center center fixed;
@@ -11,9 +7,45 @@ h2{
   background-size: cover;
   color: $color4;
   font-family: $main-font;
+
+  h1{
+    font-size: 48px;
+    font-weight: 700;
+  }
+  h2{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+  }
 }
 
 
 .screen{
   height: 100vh;
+
 }
+
+.back1{
+  background-color: $color1;
+  input[type=text] {
+    border: none;
+    border-bottom: 2px solid red;
+  }
+
+}
+
+.form-login{
+  #user_email{
+      background-color: $color1;
+      color: $color5;
+      border: none;
+      border-bottom: 1px solid $color5;
+    }
+
+    #user_password{
+      background-color: $color1;
+      color: $color5;
+      border: none;
+      border-bottom: 1px solid $color5;
+    }
+  }
