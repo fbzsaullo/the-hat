@@ -39,19 +39,38 @@
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
+    flex-direction: column-reverse;
   }
 
-  #user_email{
+     #user_email{
       background-color: $color1;
       color: $color5;
       border: none;
       border-bottom: 1px solid $color5;
     }
 
-    #user_password{
+     #user_password{
       background-color: $color1;
       color: $color5;
       border: none;
       border-bottom: 1px solid $color5;
     }
+  }
+
+  .logpad{
+    padding: 70px 135px 69px 94px;
+  }
+
+  .user_email{
+    display: flex;
+    flex-direction: column-reverse;
+    text-transform: lowercase;
+    font-size: 12px;
+  }
+
+  .user_password{
+    display: flex;
+    flex-direction: column-reverse;
+    text-transform: lowercase;
+    font-size: 12px;
   }
