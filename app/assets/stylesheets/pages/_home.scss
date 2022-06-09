@@ -1,13 +1,14 @@
 
 .banner {
-  background: image-url('banner.png');
+  background: image-url('banner.jpg');
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  padding: 280px 0;
+  padding: 280px 0 600px 0;
   position: relative;
+
 }
 
 .banner h1 {

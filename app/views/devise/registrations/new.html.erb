@@ -1,33 +1,42 @@
-<h2>Sign up</h2>
+<div class="login screen d-flex align-items-center">
+  <div class="container">
+      <div class="row">
+        <div class="col-6 mx-auto back1 signup">
+          <h1>Cadastro</h1>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= f.error_notification %>
 
-  <div class="form-inputs">
-   <%= f.input :name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "name" }%>
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.file_field :photo,
-                as: :file,
-                direct_upload: true,
-                input_html: { autocomplete: "photo-input" } %>
+            <div class="form-inputs form-login">
+            <%= f.input :name,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "name" }%>
+              <%= f.input :email,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "email" }%>
+              <%= f.input :password,
+                          required: true,
+                          hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                          input_html: { autocomplete: "new-password" } %>
+              <%= f.input :password_confirmation,
+                          required: true,
+                          input_html: { autocomplete: "new-password" } %>
+              <%= f.file_field :photo,
+                          as: :file,
+                          direct_upload: true,
+                          input_html: { autocomplete: "photo-input" } %>
+              
+            </div>
+            <div class="login-flexed d-flex justify-content-between">
+              <div class="form-actions">
+                <%= f.button :submit, "Cadastrar", class:"white-wizard" %>
+              </div>
+              <% end %>
+
+            </div>
+        </div>
+      </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
