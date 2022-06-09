@@ -1,0 +1,52 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  margin-bottom: -1px;
+  background-color: rgba(0, 0, 0, 0.4);
+  	-webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .2);
+	   -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .2);
+	        box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .2);
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-nav {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.navbar-lewagon .nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.navbar-lewagon .nav-link:hover {
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 70px;
+  opacity: 0.8;
+}
+
+.navbar-lewagon .navbar-brand img:hover {
+  opacity: 1;
+}
+
+.container-fluid {
+  width: 100vw;
+  padding: 0 200px;
+}
+
+.nav-user {
+  color: rgba(255, 255, 255, 0.8) !important;
+  padding-right: 1em !important;
+}
+
+.nav-user:hover {
+  color: rgba(255, 255, 255, 1) !important;
+  text-decoration: underline;
+}
