@@ -14,6 +14,7 @@ class QuestionsController < ApplicationController
       result = current_user.answers.joins(:question).group("questions.house_id").sum("answers.score").sort_by(&:last).reverse.first
       house = House.find(result.first)
       current_user.house_id = house.id
+      current_user.save
       redirect_to root_path
     end
   end
