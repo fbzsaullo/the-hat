@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container pt-5">
 <%= "#{@question.id} - #{@question.question}" %>
 <%= simple_form_for @answer do |f| %>
   <%= f.range_field :score, :in => 1..5, :step => 1, class: 'w-25 form-range', id: 'customRange' %>
