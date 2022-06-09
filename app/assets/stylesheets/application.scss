@@ -15,3 +15,31 @@
 body {
   background-color: #161930;
 }
+
+.user_name{
+  display: flex;
+  flex-direction: column-reverse;
+  text-transform: lowercase;
+  font-size: 12px;
+}
+
+.user_email{
+  display: flex;
+  flex-direction: column-reverse;
+  text-transform: lowercase;
+  font-size: 12px;
+}
+
+.user_password{
+  display: flex;
+  flex-direction: column-reverse;
+  text-transform: lowercase;
+  font-size: 12px;
+}
+
+.user_password_confirmation{
+  display: flex;
+  flex-direction: column-reverse;
+  text-transform: lowercase;
+  font-size: 12px;
+}
