@@ -1,0 +1,19 @@
+.footer {
+  background: #161930;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: $color5;
+  margin: 0 100px;
+}
+.footer-name {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.footer .fa-heart {
+  color: #D23333;
+}
