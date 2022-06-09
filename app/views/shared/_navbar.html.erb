@@ -12,10 +12,15 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item pr-3">
-            <span class="nav-link">Welcome, <span class="nav-user"><%= current_user.name %></span></span>
+            <span class="nav-link pt-3">Welcome, <span class="nav-user"><%= current_user.name %></span></span>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "https://cdn-icons-png.flaticon.com/512/149/149071.png", class: "avatar dropdown-toggle animation", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% if current_user.photo.attached? %>
+              <%= cl_image_tag current_user.photo.key, crop: :thumb, gravity: :face, class: "avatar-large dropdown-toggle animation", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% else %>
+              <%= image_tag "https://res.cloudinary.com/fbzsaullo/image/upload/v1654806344/360_F_453067390_5z3OMDH8aPYAmhZCv1jxVWbPalZITyz0_znubzz.jpg", class: "avatar-large dropdown-toggle animation", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% end %>
+
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My house", root_path , class: "dropdown-item" %>
               <div class="dropdown-divider"></div>
