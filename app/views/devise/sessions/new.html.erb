@@ -16,19 +16,19 @@
                         input_html: { autocomplete: "current-password" } %>
 
           </div>
-        <div class="login-flexed container d-flex justify-content-between p-0"">
 
-          <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-          <%= link_to "Ainda não é membro? Faça seu Cadastro", new_registration_path(resource_name), class:"signup-white" %><br />
-          <% end %>
-
-          <div class="form-actions">
-          <%= f.button :submit, "entrar", class:"white-wizard" %>
+            <div class="login-flexed">
+              <div class="  d-flex justify-content-between p-0"">
+                <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+                <%= link_to "Ainda não é membro? Faça seu Cadastro", new_registration_path(resource_name), class:"signup-white" %><br />
+                <% end %>
+                <div class="form-actions">
+                <%= f.button :submit, "entrar", class:"white-wizard" %>
+                </div>
+                <% end %>
+              </div>
+            </div>
           </div>
-          <% end %>
-
-         </div>
-        </div>
     </div>
   </div>
 </div>

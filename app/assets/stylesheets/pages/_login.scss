@@ -84,10 +84,10 @@
     }
 
 
-@media (max-width: 540px)
-{
-  .login-flexed .container
+@media (max-width: 540px){
+   .login-flexed .d-flex
    {
-    display: block;
+    flex-direction: column;
+    font-size: 10px;
    }
 }
