@@ -74,3 +74,20 @@
     text-transform: lowercase;
     font-size: 12px;
   }
+
+  .signup-white{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+      &:hover {
+      color:$color5;
+  }
+    }
+
+
+@media (max-width: 540px)
+{
+  .login-flexed .container
+   {
+    display: block;
+   }
+}
