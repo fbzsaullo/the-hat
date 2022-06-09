@@ -1,1 +1,73 @@
-// Specific CSS for your home-page
+
+.banner {
+  background: image-url('Group3.jpg');
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  padding: 280px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.card-product-home {
+  overflow: hidden;
+  height: 300px;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  background-color: #161930;
+  margin: 40px 100px;
+}
+
+.card-product-home img {
+  height: 100%;
+  width: 300px;
+  object-fit: cover;
+}
+
+.card-product-home h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.card-product-home p {
+  font-size: 16px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  color: white;
+}
+
+.card-product-home .card-product-infos-home {
+  padding: 130px;
+}
+
+.btn-flat {
+  color: $color5;
+  padding: 8px 24px;
+  background: #383E60;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #383E60;
+  color: $color5;
+}
