@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon px-3">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "https://res.cloudinary.com/fbzsaullo/image/upload/v1654282172/Pokeshop/thumb-175691_qj3cew.png" %>
+      <%= image_tag "https://res.cloudinary.com/fbzsaullo/image/upload/v1654778164/The%20Hat/the-hat_tt3hs4.png" %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,16 +11,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item">
-            <span class="nav-link">Welcome, <%= current_user.username %></span>
+          <li class="nav-item pr-3">
+            <span class="nav-link">Welcome, <span class="nav-user"><%= current_user.name %></span></span>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "https://res.cloudinary.com/fbzsaullo/image/upload/v1654282172/Pokeshop/thumb-175691_qj3cew.png", class: "avatar dropdown-toggle animation", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "https://cdn-icons-png.flaticon.com/512/149/149071.png", class: "avatar dropdown-toggle animation", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <!--
-              <%= link_to "My house", new_card_path , class: "dropdown-item" %> -->
+              <%= link_to "My house", root_path , class: "dropdown-item" %>
               <div class="dropdown-divider"></div>
-              <%= link_to "My profile",profile_path , class: "dropdown-item" %>
+              <%= link_to "My profile", root_path , class: "dropdown-item" %>
               <%= link_to "Edit profile",edit_user_registration_path , class: "dropdown-item" %>
               <div class="dropdown-divider"></div>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
