@@ -1,0 +1,36 @@
+.card-profile {
+  width: 500px;
+  height:400px;
+  background-color: $color1;
+  border: none;
+  transition: 0.5s;
+  margin: 100px 0;
+}
+
+.image-profile img {
+  transition: 0.5s;
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  margin-top: 30px;
+}
+
+.card-profile:hover .image-profile img {
+  transform: scale(1.2);
+}
+
+.btn-profile {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%
+}
+
+.name-profile {
+  font-size: 22px;
+  font-weight: bold
+}
+
+
+.date-profile {
+  background-color: #ccc
+}

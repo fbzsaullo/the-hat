@@ -23,11 +23,11 @@
               <%= f.input :password_confirmation,
                           required: true,
                           input_html: { autocomplete: "new-password" } %>
-              <%= f.file_field :photo,
+              <%= f.file_field :photo, class: "mb-3",
                           as: :file,
                           direct_upload: true,
                           input_html: { autocomplete: "photo-input" } %>
-              
+
             </div>
             <div class="login-flexed d-flex justify-content-between">
               <div class="form-actions">
