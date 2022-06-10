@@ -44,17 +44,9 @@ body {
   font-size: 12px;
 }
 
-.user_current_password{
+#main-container {
+  height: 100vh;
   display: flex;
-  flex-direction: column-reverse;
-  text-transform: lowercase;
-  font-size: 12px;
-}
-
-.generic-link{
- color: $color5;
- text-decoration: none;
- &:hover {
-  color:$color5;
-}
+  align-items: center;
+  justify-content: center;
 }
