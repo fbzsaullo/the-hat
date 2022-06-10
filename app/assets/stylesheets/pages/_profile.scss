@@ -1,6 +1,5 @@
 .card-profile {
   width: 500px;
-  height:400px;
   background-color: $color1;
   border: none;
   transition: 0.5s;
@@ -8,21 +7,15 @@
 }
 
 .image-profile img {
-  transition: 0.5s;
-  width: 135px;
-  height: 135px;
-  border-radius: 50%;
-  margin-top: 30px;
+  // transition: 0.5s;
+  // width: 135px;
+  // height: 135px;
+  // border-radius: 50%;
+  // margin-top: 30px;
 }
 
 .card-profile:hover .image-profile img {
-  transform: scale(1.2);
-}
-
-.btn-profile {
-  height: 140px;
-  width: 140px;
-  border-radius: 50%
+  // transform: scale(1.2);
 }
 
 .name-profile {
@@ -33,4 +26,60 @@
 
 .date-profile {
   background-color: #ccc
+}
+
+.house {
+  width: 40px;
+}
+
+/*
+ * VARIABLES
+ */
+
+// sizes
+$avatarSize: 200px;
+$borderWidth: 5px;
+$paddingSize: 20px;
+
+// some calculations
+$translateValue: -$paddingSize - $borderWidth;
+
+/*
+ * MAIN CONTENT
+ */
+
+.avatarp {
+	box-sizing: border-box;
+	height: $avatarSize;
+	border-radius: 50%;
+	position: relative;
+	width: $avatarSize;
+
+	&__image {
+		width: 100%;
+		border-radius: 50%;
+	}
+
+	&::before,
+	&::after {
+		border: $borderWidth solid transparent;
+		border-radius: 50%;
+		border-top: $borderWidth solid $color5;
+		content:"";
+		display: block;
+		height: calc(100% + 10px);
+		left: 50%;
+		width: calc(100% + 10px);
+		position: absolute;
+	}
+
+	&::before {
+		top: -2 * $borderWidth;
+		transform: translateX(-50%);
+	}
+
+	&::after {
+		bottom: -2 * $borderWidth;
+		transform: translateX(-50%) rotate(180deg);
+	}
 }

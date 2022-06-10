@@ -23,7 +23,7 @@
 
 
 .screen{
-  height: 100vh;
+  height: 120vh;
 
 }
 
@@ -70,6 +70,13 @@
       border: none;
       border-bottom: 1px solid $color5;
     }
+
+    #user_current_password{
+      background-color: $color1;
+      color: $color5;
+      border: none;
+      border-bottom: 1px solid $color5;
+    }
   }
 
   .logpad{
@@ -93,4 +100,8 @@
     flex-direction: column;
     font-size: 10px;
    }
+   .screen{
+    height: 100vh;
+
+  }
 }

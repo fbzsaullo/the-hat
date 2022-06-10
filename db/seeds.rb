@@ -1,9 +1,9 @@
 # Houses
 
-House.create!(name: "Front-End") # 1
-House.create!(name: "Back-End") # 2
-House.create!(name: "Game Dev") # 3
-House.create!(name: "Data Science") #4
+House.create!(name: "Front-End", image: "https://res.cloudinary.com/fbzsaullo/image/upload/v1654872148/The%20Hat/frontend_ieud5k.png") # 1
+House.create!(name: "Back-End", image: "https://res.cloudinary.com/fbzsaullo/image/upload/v1654872149/The%20Hat/backend_lyxc7w.png") # 2
+House.create!(name: "Game Dev", image: "https://res.cloudinary.com/fbzsaullo/image/upload/v1654872149/The%20Hat/game_kpejyl.png") # 3
+House.create!(name: "Data Science", image: "https://res.cloudinary.com/fbzsaullo/image/upload/v1654872150/The%20Hat/Data_izrcst.png") #4
 
 # Questions | Front-End
 

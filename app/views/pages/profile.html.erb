@@ -2,12 +2,14 @@
   <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
     <div class="row">
       <div class="card-profile p-4">
-        <div class=" image-profile d-flex flex-column justify-content-center align-items-center">
-
-          <%= cl_image_tag current_user.photo.key %>
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <div class="image-profile avatarp">
+          <%= cl_image_tag current_user.photo.key, class: "avatarp__image" %>
           <!-- <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" /> -->
-          </button>
-          <span class="name-profile mt-3"><%= current_user.name.capitalize %></span>
+          </div>
+          <span class="name-profile mt-3"><%= current_user.name %></span>
+          <%= image_tag current_user.house.image, class: "house" %>
+
 
           <div class=" d-flex mt-2">
             <%= link_to "Edit profile", edit_user_registration_path, class: "btn white-wizard" %>
