@@ -1,3 +1,16 @@
 .signup{
   padding: 25px 60px;
 }
+
+
+
+@media (max-width: 772px){
+  .signup{
+    padding: 0;
+  }
+
+  #user_photo{
+    flex-direction: column;
+    font-size: 10px;
+  }
+}
