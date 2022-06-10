@@ -1,0 +1,32 @@
+.question-container {
+  background-color: #F5F5F5;
+  width: 70%;
+  min-height: 500px;
+  h3 {
+    color: #383E60;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+  }
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(600px);
+  height: 500px;
+  margin: 0 auto;
+
+
+}
+
+.container-range {
+  width: 80%;
+  p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #383E60;
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
