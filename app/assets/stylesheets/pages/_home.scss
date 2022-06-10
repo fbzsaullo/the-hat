@@ -6,7 +6,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  padding: 280px 0 600px 0;
+  padding: 280px 0 500px 0;
   position: relative;
 
 }
@@ -29,7 +29,7 @@
 
 .card-product-home {
   overflow: hidden;
-  height: 350px;
+  height: 100vh;
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
@@ -58,8 +58,13 @@
   color: white;
 }
 
-.card-product-home .card-product-infos-home {
-  padding: 130px;
+.card-product-infos-home  {
+  h2 {font-size: 48px;
+    color: #F5F5F5;
+  }
+  p{
+    font-size: 20px;
+  }
 }
 
 .btn-flat {
