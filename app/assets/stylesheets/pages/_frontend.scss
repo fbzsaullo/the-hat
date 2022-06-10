@@ -1,6 +1,6 @@
 .card-frontend {
-  width: 500px;
-  height:400px;
+  width: 550px;
+  height:auto;
   background-color: $color1;
   border: none;
   transition: 0.5s;
@@ -26,4 +26,11 @@
 
 .infos-frontend p {
   font-size: 30px;
+}
+
+#titlefrontend{
+  color: #F5F5F5;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 48px;
+  font-weight: bold;
 }
