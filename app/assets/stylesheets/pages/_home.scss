@@ -6,29 +6,30 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  padding: 280px 0 600px 0;
+  padding: 280px 0 500px 0;
   position: relative;
 
 }
 
 .banner h1 {
   margin: 0;
-  color: white;
+  color: #F5F5F5;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 48px;
   font-weight: bold;
 }
 
 .banner p {
   font-size: 20px;
-  color: white;
+  color: #FFFFFF;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin: 57px 0 90px 0;
 }
 
 .card-product-home {
   overflow: hidden;
-  height: 350px;
+  height: 100vh;
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
@@ -57,8 +58,13 @@
   color: white;
 }
 
-.card-product-home .card-product-infos-home {
-  padding: 130px;
+.card-product-infos-home  {
+  h2 {font-size: 48px;
+    color: #F5F5F5;
+  }
+  p{
+    font-size: 20px;
+  }
 }
 
 .btn-flat {
@@ -71,4 +77,11 @@
 .btn-flat:hover {
   background: #383E60;
   color: $color5;
+}
+
+@media (max-width: 575px){
+  .main-black .black-wizard{
+    font-size: 15px;
+    padding: 14px 50px 14px 50px;
+  }
 }

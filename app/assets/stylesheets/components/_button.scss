@@ -8,9 +8,13 @@
 }
 
 .black-wizard{
-  font-size: 14px;
+  font-size: 20px;
   text-transform: uppercase;
   color: $color5;
-  padding: 28px 97px 30px 97px;
+  padding: 28px 98px 29px 96px;
   background-color: $color1;
+  text-decoration: none;
+    &:hover {
+    color:white;
+  }
 }
