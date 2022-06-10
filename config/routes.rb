@@ -7,10 +7,10 @@ Rails.application.routes.draw do
   resource :questions, only: [:show]
   resources :answers, only: [:create]
 
-  get "/houses/front-end", to: "houses#front-end"
-  get "/houses/back-end", to: "houses#back-end"
-  get "/houses/game-dev", to: "houses#gamedev"
-  get "/houses/data-science", to: "houses#data-science"
+  get "/houses/frontend", to: "houses#frontend"
+  get "/houses/backend", to: "houses#backend"
+  get "/houses/gamedev", to: "houses#gamedev"
+  get "/houses/datascience", to: "houses#datascience"
 
   resources :houses, only: [:show], param: :name do
     resources :languages, only: [:show], param: :name
