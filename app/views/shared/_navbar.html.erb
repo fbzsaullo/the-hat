@@ -22,7 +22,16 @@
             <% end %>
 
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "My house", houses_frontend_path , class: "dropdown-item" %> <!-- arrumar dps -->
+              <% case current_user.house_id %>
+              <% when 1 %>
+              <%= link_to "My house", houses_frontend_path , class: "dropdown-item" %>
+              <% when 2 %>
+              <%= link_to "My house", houses_backend_path , class: "dropdown-item" %>
+              <% when 3 %>
+              <%= link_to "My house", houses_gamedev_path , class: "dropdown-item" %>
+              <% else %>
+              <%= link_to "My house", houses_datascience_path , class: "dropdown-item" %>
+              <% end %>
               <div class="dropdown-divider"></div>
               <%= link_to "My profile", profile_path , class: "dropdown-item" %>
               <%= link_to "Edit profile",edit_user_registration_path , class: "dropdown-item" %>
