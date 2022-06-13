@@ -7,12 +7,12 @@
     <p class="text-center mt-3">
       <i class="devicon-javascript-plain h3"></i>
       <i class="devicon-cplusplus-plain h3 px-2"></i>
-      <i class="devicon-cplusplus-plain h3"></i>
+      <i class="devicon-csharp-plain h3"></i>
     </p>
     </div>
     <div class="column-2 w-75 p-3">
       <div class="house-title">
-        <h5>Sua casa é</h5>
+        <span style="font-size: 20px">Sua casa é</span>
         <h1><%= @house.name %></h1>
         <% if current_user.house == @house %>
         <%= "Você tem #{@result}% de afinidade com esta casa." %>
