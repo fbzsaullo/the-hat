@@ -5,6 +5,9 @@
         <div class=" image-frontend d-flex flex-column justify-content-center align-items-center">
 
           <%= image_tag @house.image %>
+          <% if current_user.house == @house %>
+          <%= "Você tem #{@result}% de afinidade com esta casa." %>
+          <% end %>
           <!-- <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" /> -->
           </button>
           <span id="title-front" class=" mt-3"><%= @house.name.capitalize %></span>

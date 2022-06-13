@@ -1,0 +1,35 @@
+.house-container {
+  width: 70vw;
+  min-height: 600px;
+  background: #E8DEB9;
+  margin: 0 auto;
+}
+
+.house-header {
+  width: 70vw;
+  height: 200px;
+  background: #a53516;
+  margin: 80px auto 0;
+  background-image: linear-gradient(rgba(23, 25, 48, 0.4),rgba(23, 25, 48, 0.4)), url("https://t3.ftcdn.net/jpg/02/39/40/08/360_F_239400826_YQExbFZM7u7yesAAnEyZb8QauJu22MWQ.jpg");
+  background-position: center right;
+  background-size: cover;
+}
+
+.house-title {
+
+}
+
+.house-info {
+
+}
+
+.column-1 {
+  position: relative;
+}
+
+.house-shield {
+  width: 100px;
+  position: absolute;
+  top: -80px;
+  left: 75px;
+}
