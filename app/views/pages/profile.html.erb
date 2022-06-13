@@ -4,8 +4,11 @@
       <div class="card-profile p-4">
         <div class="d-flex flex-column justify-content-center align-items-center">
           <div class="image-profile avatarp">
-          <%= cl_image_tag current_user.photo.key, class: "avatarp__image" %>
-          <!-- <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" /> -->
+          <% if current_user.photo.attached? %>
+            <%= cl_image_tag current_user.photo.key, class: "avatarp__image" %>
+          <% else %>
+            <%= image_tag "https://res.cloudinary.com/fbzsaullo/image/upload/v1654806344/360_F_453067390_5z3OMDH8aPYAmhZCv1jxVWbPalZITyz0_znubzz.jpg", class: "avatarp__image" %>
+          <% end %>
           </div>
           <span class="name-profile mt-3"><%= current_user.name %></span>
           <% unless current_user.house.nil? %>
