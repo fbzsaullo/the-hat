@@ -7,14 +7,13 @@
   margin: 100px 0;
 }
 
-.image-frontend img {
+.image-house img {
   transition: 0.5s;
   width: 135px;
-  height: 135px;
   margin-top: 30px;
 }
 
-.card-frontend:hover .image-frontend img {
+.card-frontend:hover .image-house img {
   transform: scale(1.2);
 }
 
