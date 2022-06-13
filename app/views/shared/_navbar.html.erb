@@ -16,7 +16,7 @@
           </li>
           <li class="nav-item dropdown">
             <% if current_user.photo.attached? %>
-              <%= cl_image_tag current_user.photo.key, crop: :thumb, gravity: :face, class: "avatar-large dropdown-toggle animation", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <%= cl_image_tag current_user.photo.key, crop: :thumb, gravity: :face, class: "avatar-large dropdown-toggle animation", id: "navbarDropdown", width: 120, height: 120, data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% else %>
               <%= image_tag "https://res.cloudinary.com/fbzsaullo/image/upload/v1654806344/360_F_453067390_5z3OMDH8aPYAmhZCv1jxVWbPalZITyz0_znubzz.jpg", class: "avatar-large dropdown-toggle animation", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>
