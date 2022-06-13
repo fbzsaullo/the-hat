@@ -2,7 +2,7 @@
   <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
     <div class="row">
       <div class="card-frontend p-4 ">
-        <div class=" image-frontend d-flex flex-column justify-content-center align-items-center">
+        <div class=" image-house d-flex flex-column justify-content-center align-items-center">
 
           <%= image_tag @house.image %>
           <!-- <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" /> -->
@@ -10,7 +10,12 @@
           <span id="title-front" class=" mt-3"><%= @house.name.capitalize %></span>
 
           <div class=" d-flex flex-column mt-2 ">
-            <%# description %>
+            <h4>O que é <strong><%= @house.name %></strong>?</h4>
+            <p>O Back-End fica responsável pelos bastidores de uma aplicação, ou seja, os códigos que permitem a parte visual funcionar corretamente.</p>
+            <p>É esse profissional que faz a ponte entre o banco de dados e as informações do navegador, de acordo com as regras de negócio em questão.</p>
+            <p>As linguagens de programação mais utilizadas no Back-End são PHP, Python, C#, Java, Ruby, entre outras.</p>
+            <p>Elas possibilitam o bom funcionamento dos servidores, a segurança dos dados e, no fim das contas, a experiência do usuário também.</p>
+            <p>Afinal, não adianta ter um layout lindo e funcional se o link da página quebra no primeiro clique, concorda?</p>
           </div>
         </div>
       </div>

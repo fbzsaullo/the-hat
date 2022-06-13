@@ -2,7 +2,7 @@
   <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
     <div class="row">
       <div class="card-frontend p-4 ">
-        <div class=" image-frontend d-flex flex-column justify-content-center align-items-center">
+        <div class=" image-house d-flex flex-column justify-content-center align-items-center">
 
           <%= image_tag @house.image %>
           <!-- <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" /> -->
@@ -10,7 +10,19 @@
           <span id="title-front" class=" mt-3"><%= @house.name.capitalize %></span>
 
           <div class=" d-flex flex-column mt-2 ">
-            <%# description %>
+            <h4>O que é <strong><%= @house.name %></strong>?</h4>
+            <p>Data Science é o estudo disciplinado dos dados e informações inerentes ao negócio e todas as visões que podem cercar um determinado assunto.</p>
+            <p>É uma ciência que estuda as informações, seu processo de captura, transformação, geração e, posteriormente, análise de dados.
+             <p>A ciência de dados envolve diversas disciplinas:</p>
+             <ul>
+              <li>Computação;</li>
+              <li>Estatística;</li>
+              <li>Matemática;</li>
+              <li>Conhecimento do Negócio.</li>
+             </ul>
+             <h5>Data Scientist ou Cientista de Dados:</h5>
+             <p>O cientista de dados é um profissional multidisciplinar, responsável por realizar o processo citado no tópico Data Science acima. Ou seja, é responsável por transformar dados em informações ou produtos de informações dentro de uma corporação.</p>
+             <p>Além disso, ele também deve ser responsável pela formulação dos problemas, escolha de modelos de simulação e estatística e entrega dos produtos de dados.</p>
           </div>
         </div>
       </div>
