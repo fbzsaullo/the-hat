@@ -15,7 +15,16 @@ class QuestionsController < ApplicationController
       house = House.find(result.first)
       current_user.house_id = house.id
       current_user.save
-      redirect_to houses_frontend_path # arrumar dps
+      case current_user.house_id
+      when 1
+        redirect_to houses_frontend_path
+      when 2
+        redirect_to houses_backend_path
+      when 3
+        redirect_to houses_gamedev_path
+      when 4
+        redirect_to houses_datascience_path
+      end
     end
   end
 
