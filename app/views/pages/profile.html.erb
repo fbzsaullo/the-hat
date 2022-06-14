@@ -12,9 +12,6 @@
           <% unless current_user.house.nil? %>
             <% link_to  %>
             <%= image_tag current_user.house.image, class: "house" %>
-            <div class='text-house'>
-              <p><%= current_user.house.name %></p>
-            </div>
           <% end %>
           </div>
           <span class="name-profile mt-3"><%= current_user.name %></span>
