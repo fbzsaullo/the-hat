@@ -24,24 +24,26 @@
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <% case current_user.house_id %>
               <% when 1 %>
-              <%= link_to "My house", houses_frontend_path , class: "dropdown-item" %>
+              <%= link_to "Minha Casa", houses_frontend_path , class: "dropdown-item" %>
               <% when 2 %>
-              <%= link_to "My house", houses_backend_path , class: "dropdown-item" %>
+              <%= link_to "Minha Casa", houses_backend_path , class: "dropdown-item" %>
               <% when 3 %>
-              <%= link_to "My house", houses_gamedev_path , class: "dropdown-item" %>
+              <%= link_to "Minha Casa", houses_gamedev_path , class: "dropdown-item" %>
+              <% when 4 %>
+              <%= link_to "Minha Casa", houses_datascience_path , class: "dropdown-item" %>
               <% else %>
-              <%= link_to "My house", houses_datascience_path , class: "dropdown-item" %>
+               <%= link_to "Iniciar Teste", questions_path , class: "dropdown-item" %>
               <% end %>
               <div class="dropdown-divider"></div>
-              <%= link_to "My profile", profile_path , class: "dropdown-item" %>
-              <%= link_to "Edit profile",edit_user_registration_path , class: "dropdown-item" %>
+              <%= link_to "Perfil", profile_path , class: "dropdown-item" %>
+              <%= link_to "Editar Perfil",edit_user_registration_path , class: "dropdown-item" %>
               <div class="dropdown-divider"></div>
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+              <%= link_to "Sair", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <%= link_to "Entrar", new_user_session_path, class: "nav-link" %>
           </li>
         <% end %>
       </ul>
