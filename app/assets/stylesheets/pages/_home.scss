@@ -8,8 +8,12 @@
   -o-background-size: cover;
   background-position: center;
   padding: 280px 0 385px 0;
-  // position: relative;
 
+}
+
+.banner-container {
+  width: 70vw;
+  margin: 0 auto;
 }
 
 .banner h1 {
@@ -30,12 +34,12 @@
 
 .card-product-home {
   overflow: hidden;
-  height: 100vh;
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   background-color: #161930;
-  margin: 40px auto;
+  margin: 200px auto;
+  width: 70vw;
 }
 
 .card-product-home img {
