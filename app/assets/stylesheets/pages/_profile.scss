@@ -30,6 +30,18 @@
 
 .house {
   width: 40px;
+  position: absolute;
+  top: 135px;
+  left: 170px;
+}
+
+.house:hover .text-house {
+  display: block;
+  color: wheat;
+}
+
+.text-house {
+  display: none;
 }
 
 /*
