@@ -2,12 +2,13 @@
 .banner {
   background: image-url('banner.jpg');
   background-size: cover;
+  margin-top: -80px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-position: center;
   padding: 280px 0 385px 0;
-  position: relative;
+  // position: relative;
 
 }
 
