@@ -12,7 +12,9 @@
     </div>
     <div class="column-2 w-75 p-3">
       <div class="house-title">
+        <% if current_user.house == @house %>
         <span style="font-size: 20px">Sua casa é</span>
+        <% end %>
         <h1><%= @house.name %></h1>
         <% if current_user.house == @house %>
         <%= "Você tem #{@result}% de afinidade com esta casa." %>
