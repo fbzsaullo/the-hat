@@ -8,8 +8,20 @@
       <% end %>
       <% unless current_user.house.nil? %>
       <% link_to  %>
-        <%= image_tag "house-flag", class: "house-flag" %>
-        <%= image_tag "gamepad", class: "gamepad" %>
+        <% case current_user.house_id %>
+        <% when 1 %>
+          <%= image_tag "house-flag", class: "house-flag-frontend" %>
+          <%= image_tag "pencil-screen", class: "gamepad" %>
+        <% when 2 %>
+          <%= image_tag "house-flag", class: "house-flag-backend" %>
+          <%= image_tag "gear-screen", class: "gamepad" %>
+        <% when 3 %>
+          <%= image_tag "house-flag", class: "house-flag-gamedev" %>
+          <%= image_tag "gamepad", class: "gamepad" %>
+        <% else %>
+          <%= image_tag "house-flag", class: "house-flag-datascience" %>
+          <%= image_tag "atom-db", class: "gamepad" %>
+        <% end %>
       <% end %>
       <span class="name-profile mt-3"><%= current_user.name %></span>
       <span class="join-date">criado em <%= @date %></span>
@@ -22,7 +34,6 @@
         <% else %>
           <span style="font-size: 20px">Sua casa é</span>
         <h1><%= current_user.house.name %></h1>
-        <%= "Você tem #{@result}% de afinidade com esta casa." %>
       </div>
       <hr>
       <p>
@@ -36,8 +47,8 @@
       <br>
       <h4>Onde aprender:</h4>
       <ul>
-        <li>Codecademy</li>
-        <li>Freecodecamp</li>
+        <li>Codecademy <span style="font-size: 10px; color: gray; font-weight: 700">GRÁTIS</span></li>
+        <li>Freecodecamp <span style="font-size: 10px; color: gray; font-weight: 700">GRÁTIS</span></li>
         <li>Alura</li>
         <li>Youtube</li>
       </ul>

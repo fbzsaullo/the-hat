@@ -122,8 +122,34 @@ $translateValue: -$paddingSize - $borderWidth;
 	}
 }
 
-.house-flag {
-  filter: invert(47%) sepia(16%) saturate(1394%) hue-rotate(58deg) brightness(96%) contrast(90%) drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
+$svg-green: invert(47%) sepia(16%) saturate(1394%) hue-rotate(58deg) brightness(96%) contrast(90%);
+$svg-blue: invert(53%) sepia(87%) saturate(2565%) hue-rotate(195deg) brightness(88%) contrast(82%);
+$svg-yellow: invert(60%) sepia(95%) saturate(405%) hue-rotate(7deg) brightness(98%) contrast(109%);
+$svg-red: invert(17%) sepia(78%) saturate(5075%) hue-rotate(27deg) brightness(95%) contrast(101%);
+
+.house-flag-datascience {
+  filter: #{$svg-blue} drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
+  width: 200px;
+  padding: 0 0 0 5px;
+  margin: -80px auto 0;
+}
+
+.house-flag-gamedev {
+  filter: #{$svg-green} drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
+  width: 200px;
+  padding: 0 0 0 5px;
+  margin: -80px auto 0;
+}
+
+.house-flag-frontend {
+  filter: #{$svg-red} drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
+  width: 200px;
+  padding: 0 0 0 5px;
+  margin: -80px auto 0;
+}
+
+.house-flag-backend {
+  filter: #{$svg-yellow} drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
   width: 200px;
   padding: 0 0 0 5px;
   margin: -80px auto 0;
