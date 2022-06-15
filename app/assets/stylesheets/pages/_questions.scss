@@ -4,7 +4,7 @@
   min-height: 500px;
   h3 {
     color: #383E60;
-    font-family: Georama;
+    font-family: $main-font;
     font-weight: bold;
   }
 }
@@ -17,8 +17,6 @@
   width: min(600px);
   height: 500px;
   margin: 0 auto;
-
-
 }
 
 .container-range {
@@ -29,4 +27,20 @@
     font-weight: bold;
     font-size: 14px;
   }
+}
+
+#custom-range::-webkit-slider-thumb {
+  background: #383E60;
+}
+
+#custom-range::-moz-range-thumb {
+  background: #383E60;
+}
+
+#custom-range::-ms-thumb {
+  background: #383E60;
+}
+
+.slider::-webkit-slider-runnable-track {
+  background-color: rgb(136, 30, 30);
 }

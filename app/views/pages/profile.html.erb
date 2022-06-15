@@ -10,17 +10,24 @@
       <% link_to  %>
         <% case current_user.house_id %>
         <% when 1 %>
-          <%= image_tag "house-flag", class: "house-flag-frontend" %>
+        <div class="house-flag-container">         
+          <%# <%= image_tag "house-flag", class: "house-flag-frontend" %>
           <%= image_tag "pencil-screen", class: "gamepad" %>
+        </div>
         <% when 2 %>
+        <div class="house-flag-container">        
           <%= image_tag "house-flag", class: "house-flag-backend" %>
           <%= image_tag "gear-screen", class: "gamepad" %>
+        </div>
         <% when 3 %>
-          <%= image_tag "house-flag", class: "house-flag-gamedev" %>
+          <div class="house-flag-container-green">
           <%= image_tag "gamepad", class: "gamepad" %>
+        </div>
         <% else %>
+          <div class="house-flag-container">    
           <%= image_tag "house-flag", class: "house-flag-datascience" %>
           <%= image_tag "atom-db", class: "gamepad" %>
+        </div>
         <% end %>
       <% end %>
       <span class="name-profile mt-3"><%= current_user.name %></span>
