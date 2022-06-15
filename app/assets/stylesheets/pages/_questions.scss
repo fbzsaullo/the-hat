@@ -1,10 +1,10 @@
 .question-container {
-  background-color: #F5F5F5;
+  background-color: $color5;
   width: 70%;
   min-height: 500px;
   h3 {
     color: #383E60;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georama;
     font-weight: bold;
   }
 }
@@ -24,7 +24,7 @@
 .container-range {
   width: 80%;
   p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georama;
     color: #383E60;
     font-weight: bold;
     font-size: 14px;
