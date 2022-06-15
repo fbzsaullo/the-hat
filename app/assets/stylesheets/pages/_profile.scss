@@ -18,15 +18,6 @@
   // transform: scale(1.2);
 }
 
-.name-profile {
-  font-size: 22px;
-  font-weight: bold
-}
-
-
-.date-profile {
-  background-color: #ccc
-}
 
 .house {
   width: 40px;
@@ -34,10 +25,13 @@
   top: 135px;
   left: 170px;
 }
+.date-profile {
+  background-color: #ccc;
+}
 
 /*
- * VARIABLES
- */
+* VARIABLES
+*/
 
 // sizes
 $avatarSize: 200px;
@@ -48,24 +42,24 @@ $paddingSize: 20px;
 $translateValue: -$paddingSize - $borderWidth;
 
 /*
- * MAIN CONTENT
- */
+* MAIN CONTENT
+*/
 
 .avatarp {
-	box-sizing: border-box;
+  box-sizing: border-box;
 	height: $avatarSize;
 	border-radius: 50%;
 	position: relative;
 	width: $avatarSize;
 
 	&__image {
-		width: 100%;
+    width: 100%;
 		border-radius: 50%;
 	}
 
 	&::before,
 	&::after {
-		border: $borderWidth solid transparent;
+    border: $borderWidth solid transparent;
 		border-radius: 50%;
 		border-top: $borderWidth solid $color5;
 		content:"";
@@ -77,12 +71,101 @@ $translateValue: -$paddingSize - $borderWidth;
 	}
 
 	&::before {
-		top: -2 * $borderWidth;
+    top: -2 * $borderWidth;
 		transform: translateX(-50%);
 	}
 
 	&::after {
-		bottom: -2 * $borderWidth;
+    bottom: -2 * $borderWidth;
 		transform: translateX(-50%) rotate(180deg);
 	}
+}
+
+// ERICK
+
+
+.profile-pic {
+  box-sizing: border-box;
+	width: 150px;
+	border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+	position: relative;
+  z-index: 10;
+
+	&__image {
+    width: 100%;
+		border-radius: 50%;
+	}
+
+	&::before,
+	&::after {
+    border: $borderWidth solid transparent;
+		border-radius: 50%;
+		border-top: $borderWidth solid $color5;
+		content:"";
+		display: block;
+		height: calc(100% + 10px);
+		left: 50%;
+		width: calc(100% + 10px);
+		position: absolute;
+	}
+
+	&::before {
+    top: -2 * $borderWidth;
+		transform: translateX(-50%);
+	}
+
+	&::after {
+    bottom: -2 * $borderWidth;
+		transform: translateX(-50%) rotate(180deg);
+	}
+}
+
+.house-flag {
+  filter: invert(47%) sepia(16%) saturate(1394%) hue-rotate(58deg) brightness(96%) contrast(90%) drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
+  width: 200px;
+  padding: 0 0 0 5px;
+  margin: -80px auto 0;
+}
+
+.name-profile {
+  font-size: 22px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+.join-date {
+  font-size: 14px;
+  text-align: center;
+  display: block;
+}
+
+.edit-profile-btn {
+  display: block;
+  background: #383E60;
+  text-decoration: none;
+  color: #E8DEB9;
+  text-align: center;
+  padding: 10px 15px;
+
+  &:hover {
+    color: #fff;
+  }
+
+}
+
+.gamepad {
+  width: 80px;
+  position: absolute;
+  margin: 10px -137px 0;
+  z-index: 1;
+}
+
+.column-1 {
+  padding: 40px 20px;
+}
+.column-2 {
+  padding: 40px 50px;
 }

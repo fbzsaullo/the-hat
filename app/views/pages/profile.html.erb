@@ -1,31 +1,47 @@
-<div class="login screen d-flex align-items-center">
-  <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
-    <div class="row">
-      <div class="card-profile p-4">
-        <div class="d-flex flex-column justify-content-center align-items-center">
-          <div class="image-profile avatarp">
-          <% if current_user.photo.attached? %>
-            <%= cl_image_tag current_user.photo.key, class: "avatarp__image" %>
-          <% else %>
-            <%= image_tag "https://res.cloudinary.com/fbzsaullo/image/upload/v1654806344/360_F_453067390_5z3OMDH8aPYAmhZCv1jxVWbPalZITyz0_znubzz.jpg", class: "avatarp__image" %>
-          <% end %>
-          <% unless current_user.house.nil? %>
-            <% link_to  %>
-            <%= image_tag current_user.house.image, class: "house" %>
-          <% end %>
-          </div>
-          <span class="name-profile mt-3"><%= current_user.name %></span>
-
-
-          <div class=" d-flex mt-2">
-            <%= link_to "Edit profile", edit_user_registration_path, class: "btn white-wizard" %>
-          </div>
-
-          <div class=" px-2 rounded-profile mt-4 date ">
-            <span class="join">Joined, <%= @date %></span>
-          </div>
-        </div>
+<div class="container my-5">
+  <div class="house-container p-3 d-flex">
+    <div class="column-1 w-25">
+      <% if current_user.photo.attached? %>
+      <%= cl_image_tag current_user.photo.key, class: "profile-pic" %>
+      <% else %>
+      <%= image_tag "https://res.cloudinary.com/fbzsaullo/image/upload/v1654806344/360_F_453067390_5z3OMDH8aPYAmhZCv1jxVWbPalZITyz0_znubzz.jpg", class: "profile-pic" %>
+      <% end %>
+      <% unless current_user.house.nil? %>
+      <% link_to  %>
+        <%= image_tag "house-flag", class: "house-flag" %>
+        <%= image_tag "gamepad", class: "gamepad" %>
+      <% end %>
+      <span class="name-profile mt-3"><%= current_user.name %></span>
+      <span class="join-date">criado em <%= @date %></span>
+      <%= link_to "Editar perfil", edit_user_registration_path, class: "edit-profile-btn mt-3" %>
+    </div>
+    <div class="column-2 w-75">
+      <div class="house-title">
+        <% if current_user.house == nil %>
+          <h4>Você ainda não possui uma casa!</h4>
+        <% else %>
+          <span style="font-size: 20px">Sua casa é</span>
+        <h1><%= current_user.house.name %></h1>
+        <%= "Você tem #{@result}% de afinidade com esta casa." %>
       </div>
+      <hr>
+      <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacinia, nibh in interdum semper, nisi arcu volutpat nisi, vel ornare neque quam a ipsum. Aliquam erat volutpat. Aenean sit amet dignissim lorem, eu commodo tortor. Aenean nec suscipit ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+      <br>
+      <h4>Principais linguagens</h4>
+        <i class="devicon-javascript-plain"> Javascript</i>
+        <i class="devicon-cplusplus-plain px-3"> C++</i>
+        <i class="devicon-csharp-plain"> C#</i>
+      <br>
+      <br>
+      <h4>Onde aprender:</h4>
+      <ul>
+        <li>Codecademy</li>
+        <li>Freecodecamp</li>
+        <li>Alura</li>
+        <li>Youtube</li>
+      </ul>
+      <% end %>
     </div>
   </div>
 </div>

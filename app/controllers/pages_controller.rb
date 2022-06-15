@@ -19,4 +19,9 @@ class PagesController < ApplicationController
   def profile
     @date = current_user.created_at.to_s.split.first.gsub('-', '/')
   end
+
+  def house_sort
+    first_result = current_user.answers.joins(:question).group("questions.house_id").sum("answers.score").sort_by(&:last).reverse.first
+    @result = (first_result.last * 100) / 20
+  end
 end
