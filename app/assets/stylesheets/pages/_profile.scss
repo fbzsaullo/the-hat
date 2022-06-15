@@ -137,8 +137,9 @@ $svg-red: invert(17%) sepia(78%) saturate(5075%) hue-rotate(27deg) brightness(95
 .house-flag-gamedev {
   filter: #{$svg-green} drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
   width: 200px;
-  padding: 0 0 0 5px;
-  margin: -80px auto 0;
+  padding-left: 5px;
+  margin: 0 auto;
+  position: absolute;
 }
 
 .house-flag-frontend {
@@ -184,8 +185,9 @@ $svg-red: invert(17%) sepia(78%) saturate(5075%) hue-rotate(27deg) brightness(95
 
 .gamepad {
   width: 80px;
+  display: block;
   position: absolute;
-  margin: 10px -137px 0;
+  margin: 0 auto;
   z-index: 1;
 }
 
@@ -194,4 +196,21 @@ $svg-red: invert(17%) sepia(78%) saturate(5075%) hue-rotate(27deg) brightness(95
 }
 .column-2 {
   padding: 40px 50px;
+}
+
+.house-flag-container-green {
+  position: relative;
+  margin-top: -50px;
+  min-width: 200px;
+  height: 200px;
+  background-image: url("/assets/house-flag.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .house-flag-color {
+    filter: $svg-green;
+  }
 }

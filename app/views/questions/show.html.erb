@@ -6,7 +6,7 @@
       </div>
       <div class="container-range">
         <%= simple_form_for @answer do |f| %>
-          <%= f.range_field :score, :in => 1..5, :step => 1, class: 'form-range d-block mt-5', id: 'custom-range' %>
+          <%= f.range_field :score, :in => 1..5, :step => 1, class: 'form-range slider d-block mt-5', id: 'custom-range' %>
           <span class="d-flex justify-content-between"><p>Discordo</p><p>Concordo</p></span>
           <span class="d-flex justify-content-end"><%= f.button :submit, "Próximo >>", class: "btn btn-flat mt-3" %></span>
         <%= f.input :question_id, as: :hidden, type: :range, input_html: { value: @question.id } %>
