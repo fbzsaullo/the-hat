@@ -90,7 +90,6 @@ $translateValue: -$paddingSize - $borderWidth;
 	border-radius: 50%;
   display: block;
   margin: 0 auto;
-	position: relative;
   z-index: 10;
 
 	&__image {
@@ -199,18 +198,53 @@ $svg-red: invert(17%) sepia(78%) saturate(5075%) hue-rotate(27deg) brightness(95
 }
 
 .house-flag-container-green {
-  position: relative;
-  margin-top: -50px;
-  min-width: 200px;
+  margin: -50px auto 0;
   height: 200px;
-  background-image: url("/assets/house-flag.svg");
+  min-width: 100px;
+  background-image: url("/assets/house-flag-green.svg");
   background-size: contain;
+  background-position: top center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
-  .house-flag-color {
-    filter: $svg-green;
-  }
+.house-flag-container-red {
+  margin: -50px auto 0;
+  height: 200px;
+  min-width: 100px;
+  background-image: url("/assets/house-flag-red.svg");
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.house-flag-container-blue {
+  margin: -50px auto 0;
+  height: 200px;
+  min-width: 100px;
+  background-image: url("/assets/house-flag-blue.svg");
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.house-flag-container-yellow {
+  margin: -50px auto 0;
+  height: 200px;
+  min-width: 100px;
+  background-image: url("/assets/house-flag-yellow.svg");
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
