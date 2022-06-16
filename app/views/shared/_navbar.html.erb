@@ -36,7 +36,11 @@
               <% end %>
               <%= link_to "Forum", "https://forum.thehat.dev/" , class: "dropdown-item" %>
               <div class="dropdown-divider"></div>
-              <%= link_to "Perfil", profile_path , class: "dropdown-item" %>
+              <% unless current_user.house_id %>
+                <%= link_to "Perfil", questions_path , class: "dropdown-item" %>
+              <% else %>
+                <%= link_to "Perfil", profile_path , class: "dropdown-item" %>
+              <% end %>
               <%= link_to "Editar Perfil",edit_user_registration_path , class: "dropdown-item" %>
               <div class="dropdown-divider"></div>
               <%= link_to "Sair", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
