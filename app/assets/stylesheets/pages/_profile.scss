@@ -85,6 +85,7 @@ $translateValue: -$paddingSize - $borderWidth;
 
 
 .profile-pic {
+  filter: drop-shadow(0 4mm 4mm rgba(0, 0, 0, 0.5));
   box-sizing: border-box;
 	width: 150px;
 	border-radius: 50%;
