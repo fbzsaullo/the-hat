@@ -2,9 +2,9 @@
   <div class="house-container p-3 d-flex">
     <div class="column-1 w-25">
       <% if current_user.photo.attached? %>
-      <%= cl_image_tag current_user.photo.key, class: "profile-pic" %>
+        <%= cl_image_tag current_user.photo.key, class: "profile-pic" %>
       <% else %>
-      <%= image_tag "https://res.cloudinary.com/fbzsaullo/image/upload/v1654806344/360_F_453067390_5z3OMDH8aPYAmhZCv1jxVWbPalZITyz0_znubzz.jpg", class: "profile-pic" %>
+        <%= image_tag "https://res.cloudinary.com/fbzsaullo/image/upload/v1654806344/360_F_453067390_5z3OMDH8aPYAmhZCv1jxVWbPalZITyz0_znubzz.jpg", class: "profile-pic" %>
       <% end %>
       <% unless current_user.house.nil? %>
       <% link_to  %>
@@ -14,7 +14,7 @@
           <%= image_tag "pencil-screen", class: "gamepad" %>
         </div>
         <% when 2 %>
-        <div class="house-flag-container-yellow">        
+        <div class="house-flag-container-yellow">
           <%= image_tag "gear-screen", class: "gamepad" %>
         </div>
         <% when 3 %>
@@ -22,7 +22,7 @@
           <%= image_tag "gamepad", class: "gamepad" %>
         </div>
         <% else %>
-          <div class="house-flag-container-blue">    
+          <div class="house-flag-container-blue">
           <%= image_tag "atom-db", class: "gamepad" %>
         </div>
         <% end %>
@@ -43,10 +43,27 @@
       <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacinia, nibh in interdum semper, nisi arcu volutpat nisi, vel ornare neque quam a ipsum. Aliquam erat volutpat. Aenean sit amet dignissim lorem, eu commodo tortor. Aenean nec suscipit ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
       <br>
+      <!-- //// LANGUAGES ICONS -->
       <h4>Principais linguagens</h4>
-        <i class="devicon-javascript-plain"> Javascript</i>
-        <i class="devicon-cplusplus-plain px-3"> C++</i>
-        <i class="devicon-csharp-plain"> C#</i>
+      <% case current_user.house_id %>
+      <% when 1 %>
+      <i class="devicon-css3-plain h5"> CSS3</i>
+      <i class="devicon-javascript-plain h5 px-3"> JavaScript</i>
+      <i class="devicon-react-original h5"> React.js</i>
+      <% when 2 %>
+      <i class="devicon-javascript-plain h5"> JavaScript</i>
+      <i class="devicon-ruby-plain h5 px-3"> Ruby</i>
+      <i class="devicon-python-plain h5"> Python</i>
+      <% when 3 %>
+      <i class="devicon-javascript-plain h5"> JavaScript</i>
+      <i class="devicon-cplusplus-plain h5 px-3"> C++</i>
+      <i class="devicon-csharp-plain h5"> C#</i>
+      <% when 4 %>
+      <i class="devicon-python-plain h5"> Python</i>
+      <i class="devicon-r-plain h5 px-3"> R</i>
+      <i class="devicon-java-plain h5"> Java</i>
+      <% end %>
+      <!-- //// FINISH LANGUAGES ICONS -->
       <br>
       <br>
       <h4>Onde aprender:</h4>
