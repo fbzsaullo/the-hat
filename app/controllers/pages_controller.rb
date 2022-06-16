@@ -18,6 +18,18 @@ class PagesController < ApplicationController
 
   def profile
     @date = current_user.created_at.to_s.split.first.gsub('-', '/')
+    case current_user.house_id
+       when 1
+         @house = houses_frontend_path
+       when 2
+         @house = houses_backend_path
+       when 3
+         @house = houses_gamedev_path
+       when 4
+         @house = houses_datascience_path
+       else
+        render "home"
+       end
   end
 
   def house_sort
