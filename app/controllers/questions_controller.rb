@@ -8,6 +8,7 @@ class QuestionsController < ApplicationController
   def show
     @answered_questions = current_user.answers.pluck(:question_id)
     @question = Question.where.not(id: @answered_questions).sample
+    @question_number = @answered_questions.count + 1
     @answer = Answer.new
 
     if @question.nil?
