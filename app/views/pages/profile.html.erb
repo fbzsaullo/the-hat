@@ -11,19 +11,19 @@
         <% case current_user.house_id %>
         <% when 1 %>
         <div class="house-flag-container-red">
-          <%= image_tag "pencil-screen", class: "gamepad" %>
+          <%= image_tag "pencil-screen.svg", class: "gamepad" %>
         </div>
         <% when 2 %>
         <div class="house-flag-container-yellow">
-          <%= image_tag "gear-screen", class: "gamepad" %>
+          <%= image_tag "gear-screen.svg", class: "gamepad" %>
         </div>
         <% when 3 %>
           <div class="house-flag-container-green">
-          <%= image_tag "gamepad", class: "gamepad" %>
+          <%= image_tag "gamepad.svg", class: "gamepad" %>
         </div>
         <% else %>
           <div class="house-flag-container-blue">
-          <%= image_tag "atom-db", class: "gamepad" %>
+          <%= image_tag "atom-db.svg", class: "gamepad" %>
         </div>
         <% end %>
       <% end %>
