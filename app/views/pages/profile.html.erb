@@ -1,4 +1,4 @@
-<div class="container my-5">
+<div class="main-container my-5">
   <div class="house-container p-3 d-flex">
     <div class="column-1 w-25">
       <% if current_user.photo.attached? %>
@@ -10,13 +10,11 @@
       <% link_to  %>
         <% case current_user.house_id %>
         <% when 1 %>
-        <div class="house-flag-container">         
-          <%# <%= image_tag "house-flag", class: "house-flag-frontend" %>
+        <div class="house-flag-container-red">
           <%= image_tag "pencil-screen", class: "gamepad" %>
         </div>
         <% when 2 %>
-        <div class="house-flag-container">        
-          <%= image_tag "house-flag", class: "house-flag-backend" %>
+        <div class="house-flag-container-yellow">        
           <%= image_tag "gear-screen", class: "gamepad" %>
         </div>
         <% when 3 %>
@@ -24,8 +22,7 @@
           <%= image_tag "gamepad", class: "gamepad" %>
         </div>
         <% else %>
-          <div class="house-flag-container">    
-          <%= image_tag "house-flag", class: "house-flag-datascience" %>
+          <div class="house-flag-container-blue">    
           <%= image_tag "atom-db", class: "gamepad" %>
         </div>
         <% end %>
