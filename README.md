@@ -6,7 +6,7 @@
 <div align="center">
   <h3>Find the programming area that best suits you.</h3>
   <h4><a href="thehat.dev">https://thehat.dev</a></h4>
-  <h4>or</h4>
+ <h4>or</h4>
   <h4><a href="https://the-hat-br.herokuapp.com/">https://the-hat-br.herokuapp.com</a></h4>
   <h2 align="center">Contributors</h2>
   <h3 align="center"> fbzsaullo</h3>
