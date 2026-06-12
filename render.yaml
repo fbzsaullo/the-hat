@@ -1,0 +1,32 @@
+# Render Blueprint Specification
+# See https://render.com/docs/blueprints for more information.
+services:
+  # Web service running the Rails application
+  - type: web
+    name: the-hat-web
+    env: docker
+    plan: free
+    preDeployCommand: "bundle exec rails db:migrate"
+    startCommand: "bundle exec rails server -b 0.0.0.0"
+    envVars:
+      - key: RAILS_ENV
+        value: production
+      - key: RAILS_LOG_TO_STDOUT
+        value: "true"
+      - key: RAILS_SERVE_STATIC_FILES
+        value: "true"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: the-hat-db
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: SECRET_KEY_BASE
+        generateValue: true
+
+databases:
+  # PostgreSQL database instance
+  - name: the-hat-db
+    databaseName: the_hat_production
+    user: the_hat
+    plan: free
