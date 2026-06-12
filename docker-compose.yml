@@ -22,6 +22,7 @@ services:
     environment:
       DATABASE_URL: postgres://postgres:postgres@db:5432/the_hat_development
       RAILS_ENV: development
+      RAILS_MASTER_KEY: ${RAILS_MASTER_KEY}
     depends_on:
       - db
 
