@@ -6,8 +6,6 @@ services:
     name: the-hat-web
     env: docker
     plan: free
-    preDeployCommand: "bundle exec rails db:migrate"
-    startCommand: "bundle exec rails server -b 0.0.0.0"
     envVars:
       - key: RAILS_ENV
         value: production
