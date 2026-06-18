@@ -18,15 +18,39 @@ $main-font: Domine;
 
 @import url('https://fonts.googleapis.com/css2?family=#{$main-font}:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+.page {
+  margin: 0;
+  height: 100vh;
+
+  display: grid;
+  grid-template-areas:
+  "navbar"
+  "content"
+  "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr 100px;
+
+  background-color: #161930;
+}
 
 body {
-  background-color: #161930;
   font-family: $main-font;
   h1, h2, h3, h4, h5, h6 {
     font-family: $main-font;
   }
 }
 
+nav {
+  grid-area: navbar;
+}
+
+main {
+  grid-area: content;
+}
+
+footer {
+  grid-area: footer;
+}
 
 .user_name{
   display: flex;
